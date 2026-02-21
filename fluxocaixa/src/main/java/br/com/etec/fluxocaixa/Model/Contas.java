@@ -43,11 +43,4 @@ public class Contas {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id")
     private Clientes cliente;
-
-    public BigDecimal getValorComSinal() {
-        if (tipoMovimentacao != null && tipoMovimentacao.get.equalsIgnoreCase("PAGAR")) {
-            return valor.negate(); // torna negativo
-        }
-        return valor; // mantém positivo
-    }
 }
